@@ -8,11 +8,12 @@ import './Styles/Home.css'
 import SearchBar from './SearchBar/SearchBar';
 import Events from './Events';
 import MemberShip from './MemberShip';
+import Footer from './Footer';
 
 
 function Home() {
-  return (
-    <div className='home-wrapper mt-4 mb-4'>
+  return <>
+    <div className='home-wrapper mt-4 w-100'>
       <TopBar/>
       <div className='img-slider'>
       <Carousel>
@@ -43,12 +44,11 @@ function Home() {
       <MemberShip/>
       <SearchBar/>
       <Events/>
-      
-      
-
       </div>
     </div>
-  )
+    <Footer/>
+    
+  </>
 }
 
 export default Home

@@ -16,8 +16,9 @@ function MemberForm() {
     let [email, setEmail] = useState();
     let [pwd, setPwd] = useState();
 
-    const handleSubmit = async ()=>{
+    const handleSubmit = async (e)=>{
         try {
+            e.preventDefault()
             let data = {id: sessionStorage.getItem('data'), email: email, password: pwd}
             let response = await api.put(ApiRoutes.MemberForm.path, data, {authenticate: ApiRoutes.MemberForm.authenticate});
             toast.success(response.message);
@@ -34,10 +35,10 @@ function MemberForm() {
         
         <h1>Organizer Form</h1>
         <h3 className='text-center mt-4 mb-4'>By submitting this form you will become an organizer once admin approves you</h3>
-        <Form>
+        <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" onChange={(e)=>setEmail(e.target.value)}/>
+            <Form.Control type="email" placeholder="Enter email" onChange={(e)=>setEmail(e.target.value)} required/>
             <Form.Text className="text-muted">
                 We'll never share your email with anyone else.
             </Form.Text>
@@ -45,10 +46,10 @@ function MemberForm() {
 
         <Form.Group className="mb-3">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" onChange={(e)=>setPwd(e.target.value)}/>
+            <Form.Control type="password" placeholder="Password" onChange={(e)=>setPwd(e.target.value)} required/>
         </Form.Group>
 
-        <Button variant="primary" type="button" onClick={handleSubmit}>
+        <Button variant="primary" type="submit">
             Submit
         </Button>
         </Form>
