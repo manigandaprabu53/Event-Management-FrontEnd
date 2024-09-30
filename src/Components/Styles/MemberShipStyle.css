@@ -1,0 +1,10 @@
+.Main-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: cover;
+    height: auto;
+    background: linear-gradient(to right, rgb(195, 110, 146),white);
+    margin: 20px auto;  
+    padding-top: 30px;  
+}

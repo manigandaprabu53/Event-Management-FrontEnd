@@ -1,0 +1,23 @@
+
+
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, rgb(165, 220, 234),pink);
+    padding: 10px 14px ;
+}
+
+.details h1{
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px auto 24px auto;
+    padding: 10px auto;
+}

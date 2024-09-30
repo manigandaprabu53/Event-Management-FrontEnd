@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mr-10{
+    margin-right: 10px;
+}
+
+.non-link{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.pay-container{
+    margin-left: 20%;
+    margin-top: 40px;
+}
