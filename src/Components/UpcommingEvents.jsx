@@ -6,16 +6,16 @@ import toast from 'react-hot-toast';
 import TopBar from './TopBar';
 import { useNavigate } from 'react-router-dom';
 
-export default function AllEvents() {
+function UpcommingEvents() {
 
-  let navigate = useNavigate();
+    let navigate = useNavigate();
 
   const [events, setEvents] = useState([]);
 
 
   const fetchEvents = async () => {
     try {
-      const response = await api.get(ApiRoutes.GetAllApprovedEvents.path, {authenticate: ApiRoutes.GetAllApprovedEvents.authenticate});
+      const response = await api.get(ApiRoutes.UpcommingEvents.path, {authenticate: ApiRoutes.UpcommingEvents.authenticate});
       console.log(response.events)
       if(response && response.events){
         setEvents(response.events);
@@ -23,7 +23,6 @@ export default function AllEvents() {
       }else{
         toast.error("No Events Found")
       }
-      
     } catch (error) {
       console.error('Error fetching events:', error);
     }
@@ -55,6 +54,7 @@ export default function AllEvents() {
         ))}
       </div>
     </Container>
-    </>
+  </>
 }
 
+export default UpcommingEvents

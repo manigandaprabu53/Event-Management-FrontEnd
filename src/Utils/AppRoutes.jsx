@@ -12,6 +12,7 @@ import CancelEvents from "../Components/CancelEvents";
 import ViewMore from "../Components/ViewMore";
 import AllEvents from "../Components/AllEvents";
 import Payment from "../Components/Payment";
+import UpcommingEvents from "../Components/UpcommingEvents";
 
 const AppRoutes = [
     {
@@ -65,6 +66,10 @@ const AppRoutes = [
     {
         path: '/payment/:id',
         element: <Payment/>
+    },
+    {
+        path: '/upcommingEvents',
+        element: <UpcommingEvents/>
     },
     {
         path: '*',

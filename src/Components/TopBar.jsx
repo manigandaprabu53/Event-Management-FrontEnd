@@ -37,6 +37,11 @@ function TopBar() {
           value: "Event_DashBoard",
           path: "/cancelEvents",
           role: ["organizer"]
+        },
+        {
+          value: "Upcomming_Events",
+          path: "/upcommingEvents",
+          role: ["user"]
         }
       ]
 

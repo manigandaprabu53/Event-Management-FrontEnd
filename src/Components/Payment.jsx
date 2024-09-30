@@ -47,7 +47,7 @@ function Payment(){
 
             // Send the token to your server
             const info = {token: token, userID: sessionStorage.getItem('data'), eventID: id}
-            const response = await axios.post('http://localhost:8000/ticket/payment', info);
+            const response = await axios.post('https://event-management-backend-1qip.onrender.com/ticket/payment', info);
             console.log("Payment successful:", response.data);
             if(response.status === 200){
                 toast.success(response.data.message)

@@ -20,7 +20,7 @@ function ResetPassword() {
   let {token} = useParams();
   const handlepassword = async(values)=>{
     try {
-      let response = await axios.put(`http://localhost:8000/users/resetPassword/${token}`, values);
+      let response = await axios.put(`https://event-management-backend-1qip.onrender.com/users/resetPassword/${token}`, values);
       toast.success(response.data.message);
       console.log(response)
       navigate('/login')

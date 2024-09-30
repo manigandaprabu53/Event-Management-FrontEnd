@@ -71,6 +71,10 @@ const ApiRoutes = {
     RegisterEvent: {
         path: '/ticket/purchaseTicket',
         authenticate: true
+    },
+    UpcommingEvents: {
+        path: '/event/upcommingEvent',
+        authenticate: true
     }
 }
 

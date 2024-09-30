@@ -24,7 +24,6 @@ function SignupUser() {
 
     const handleSignUp = async(values)=>{
       try {
-        console.log("*******************")
           let response = await api.post(ApiRoutes.SignupUser.path, values, {authenticate: ApiRoutes.SignupUser.authenticate});
           console.log(response)
           toast.success(response.message);
