@@ -65,7 +65,6 @@ function OrganizersApproval() {
   return <>
     <TopBar/>
     <div className='p-4'>
-        <TopBar/>
         <Table striped bordered hover>
             <thead>
                 <tr>

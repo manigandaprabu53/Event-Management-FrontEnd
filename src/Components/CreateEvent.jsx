@@ -45,10 +45,12 @@ function CreateEvent() {
         setArr(onchangeval);
     }
 
-    const handleSubmit = async ()=>{
+    const handleSubmit = async (e)=>{
         try {
+            e.preventDefault()
             const data = {title: title, description: description, category: category, date: date, time: time, location: location, ticketPricing: arr, organizer: organizer, image: image};
             let response = await api.post(ApiRoutes.CreateEvent.path, data, {authenticate: ApiRoutes.CreateEvent.authenticate});
+            console.log(response)
             toast.success(response.message)
             navigate('/index')
         } catch (error) {
